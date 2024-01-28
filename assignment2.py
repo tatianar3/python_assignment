@@ -7,13 +7,14 @@ class Assignment2:
 
 # task 2
     def tellAge(self, currentYear) -> str:
-        age = currentYear - self.currentYear
+        age = currentYear - self.year
         return f"Your age is {age}"
 
 # task 3
     def listAnniversaries(self):
         anniversaries = [year % 100 for year in range(self.year, self.currentYear, 10)
                          if year <= self.currentYear]
+        anniversaries.remove(0)
         return anniversaries
 
 # task 4
