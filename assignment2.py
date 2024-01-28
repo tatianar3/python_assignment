@@ -6,14 +6,14 @@ class Assignment2:
         self.currentYear = 2022
 
 # task 2
-    def tellAge(self, currentYear):
+    def tellAge(self, currentYear) -> str:
         age = currentYear - self.currentYear
-        print("Your age is " + age)
+        return f"Your age is {age}"
 
 # task 3
     def listAnniversaries(self):
         anniversaries = [year % 100 for year in range(self.year, self.currentYear, 10)
-                         if year + 10 <= self.currentYear]
+                         if year <= self.currentYear]
         return anniversaries
 
 # task 4
@@ -48,6 +48,11 @@ class Assignment2:
             tcp_socket.close()
 
             return True
+
+        except Exception as e:
+            print(f"Error: {e}")
+
+            return False
 
         except Exception as e:
             print(f"Error: {e}")
