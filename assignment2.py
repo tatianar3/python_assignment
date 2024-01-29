@@ -12,7 +12,10 @@ class Assignment2:
 
 # task 3
     def listAnniversaries(self):
-        anniversaries = [year % 100 for year in range(self.year, self.currentYear, 10) if year <= self.currentYear]
+        anniversaries = []
+        for year in range(self.year, self.currentYear, 10):
+            anniversaries.append(year + 10)
+        
         return anniversaries
 
 # task 4
