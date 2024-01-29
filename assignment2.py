@@ -63,3 +63,24 @@ class Assignment2:
             print(f"Error: {e}")
 
             return False
+
+# test cases
+a = Assignment2(1991)
+ret = a.listAnniversaries()
+print(ret)  # should print [10, 20, 30]
+
+a = Assignment2(1782)
+ret = a.modifyYear(3)
+print(ret)  # should print 17171754
+
+ret = Assignment2.checkGoodString("f1obar0more")
+print(ret)  # should print False
+
+ret = Assignment2.checkGoodString("foobar0more")
+print(ret)  # should print True
+
+retval = Assignment2.connectTcp("www.google.com", 80)
+if retval:
+    print("Connection established correctly")
+else:
+    print("Some error")
