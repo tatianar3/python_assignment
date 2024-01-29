@@ -20,7 +20,7 @@ class Assignment2:
         year_str = str(self.year)
         mod_year = str(self.year * n)  # year * n
         first_two_chars = year_str[:2]
-        odd_nums = mod_year[1::2]
+        odd_nums = mod_year[0::2]
         modified_str = first_two_chars * n + odd_nums
         return modified_str
 
