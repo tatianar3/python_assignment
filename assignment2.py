@@ -13,9 +13,11 @@ class Assignment2:
 # task 3
     def listAnniversaries(self):
         anniversaries = []
-        for year in range(self.year, self.currentYear, 10):
-            anniversaries.append(year + 10)
-        
+        diff = self.currentYear - self.year
+
+        for i in range(10, diff + 1, 10):
+            anniversaries.append(i)
+
         return anniversaries
 
 # task 4
